@@ -12,10 +12,12 @@ const isp = document.getElementById("isp");
 //DOM loaded
 //document.addEventListener("DOMContentLoaded", apiFetch());
 
-async function apiFetch(ip = "") {
+async function apiFetch(ip = "", domain = "") {
 	try {
 		const res = await fetch(
-			`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`
+			`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}${
+				ip ? `&ipAddress=${ip}` : ``
+			}${domain ? `&domain=${domain}` : ``}`
 		);
 
 		if (!res.ok) {
@@ -40,5 +42,8 @@ function displayResult(data) {
 //form submission
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
+	//regex
+	let domainRegEx = /^[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,6}$/i;
+
 	apiFetch(ipInput.value);
 });
