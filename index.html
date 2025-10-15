@@ -24,7 +24,7 @@
 					IP Address Tracker
 				</h1>
 				<div>
-					<form>
+					<form id="ip-form">
 						<input
 							type="text"
 							name="ip-address"
@@ -33,7 +33,10 @@
 							class="bg-white p-4 text-grey-200 w-64 md:w-96 h-[50px] rounded-tl-lg rounded-bl-lg" />
 						<button
 							class="bg-black text-white h-[50px] p-4 relative -left-1 top-0.5 rounded-tr-lg rounded-br-lg">
-							<img src="./images/icon-arrow.svg" alt="arrow-icon" />
+							<img
+								src="./images/icon-arrow.svg"
+								alt="arrow-icon"
+								type="submit" />
 						</button>
 					</form>
 				</div>
@@ -47,7 +50,7 @@
 						</h2>
 						<p
 							id="ip-address"
-							class="font-bold text-xl md:text-3xl md:text-left text-center">
+							class="font-semibold text-xl md:text-2xl md:text-left text-center">
 							192.212.174.101
 						</p>
 					</div>
@@ -56,8 +59,10 @@
 							class="font-bold text-xs text-gray-400 md:text-left text-center uppercase">
 							Locations
 						</h2>
-						<p class="font-bold text-xl md:text-3xl md:text-left text-center">
-							<span id="city">Gardena NY</span> <span id="zip-code"> 1001</span>
+						<p
+							class="font-semibold text-xl md:text-2xl md:text-left text-center">
+							<span id="city" class="block">Gardena NY</span>
+							<span id="zip-code"> 10001</span>
 						</p>
 					</div>
 					<div class="md:w-1/4 w-full md:border-r-1 border-gray-200">
@@ -67,7 +72,7 @@
 						</h2>
 						<p
 							id="timezone"
-							class="font-bold text-xl md:text-3xl md:text-left text-center">
+							class="font-semibold text-xl md:text-2xl md:text-left text-center">
 							UTC- 05:00
 						</p>
 					</div>
@@ -78,7 +83,7 @@
 						</h2>
 						<p
 							id="isp"
-							class="font-bold text-xl md:text-3xl md:text-left text-center">
+							class="font-semibold text-xl md:text-2xl md:text-left text-center">
 							SpaceX Starlink
 						</p>
 					</div>
