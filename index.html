@@ -26,9 +26,12 @@
 		</style> -->
 	</head>
 	<body>
-		<header class="bg-blue-500 py-8">
-			<div class="flex flex-col gap-y-8 w-full text-center">
-				<h1>IP Address Tracker</h1>
+		<header class="bg-blue-500 py-8 overflow-visible relative z-9">
+			<div
+				class="flex flex-col gap-y-8 text-center max-w-[85rem] justify-center mx-auto p-8">
+				<h1 class="text-2xl md:text-3xl text-white font-bold">
+					IP Address Tracker
+				</h1>
 				<div>
 					<form>
 						<input
@@ -36,35 +39,61 @@
 							name="ip-address"
 							id="ip-address"
 							placeholder="Search for any IP address or domain"
-							class="bg-white p-4 text-grey-200" />
-						<button class="bg-black text-white p-4">></button>
+							class="bg-white p-4 text-grey-200 w-64 md:w-96 rounded-tl-lg rounded-bl-lg" />
+						<button
+							class="bg-black text-white p-4 relative -left-1 rounded-tr-lg rounded-br-lg">
+							>
+						</button>
 					</form>
 				</div>
-				<div id="ip-results">
-					<div>
-						<h2>IP address</h2>
-						<p id="ip-address">192.212.174.101</p>
+				<div
+					id="ip-results"
+					class="max-w-[85rem] bg-white rounded-lg flex flex-col md:flex-row gap-y-4 md:gap-x-4 px-4 py-8">
+					<div class="md:w-1/4 w-full md:border-r-1 border-gray-200">
+						<h2
+							class="font-bold text-xs text-gray-400 md:text-left text-center uppercase">
+							IP address
+						</h2>
+						<p
+							id="ip-address"
+							class="font-bold text-xl md:text-3xl md:text-left text-center">
+							192.212.174.101
+						</p>
 					</div>
-					<div>
-						<h2>Locations</h2>
-						<p>
+					<div class="md:w-1/4 w-full md:border-r-1 border-gray-200">
+						<h2
+							class="font-bold text-xs text-gray-400 md:text-left text-center uppercase">
+							Locations
+						</h2>
+						<p class="font-bold text-xl md:text-3xl md:text-left text-center">
 							<span id="city">Gardena NY</span> <span id="zip-code"> 1001</span>
 						</p>
 					</div>
-					<div>
-						<h2>Timezone</h2>
-						<p id="timezonr">UTC- 05:00</p>
+					<div class="md:w-1/4 w-full md:border-r-1 border-gray-200">
+						<h2
+							class="font-bold text-xs text-gray-400 md:text-left text-center uppercase">
+							Timezone UTC
+						</h2>
+						<p
+							id="timezone"
+							class="font-bold text-xl md:text-3xl md:text-left text-center">
+							UTC- 05:00
+						</p>
 					</div>
-					<div>
-						<h2>ISP</h2>
-						<p id="isp">SpaceX Starlink</p>
+					<div class="md:w-1/4 w-full">
+						<h2
+							class="font-bold text-xs text-gray-400 md:text-left text-center uppercase">
+							ISP
+						</h2>
+						<p
+							id="isp"
+							class="font-bold text-xl md:text-3xl md:text-left text-center">
+							SpaceX Starlink
+						</p>
 					</div>
 				</div>
 			</div>
 		</header>
-		Search for any IP address or domain IP Address Location Timezone UTC
-		<!-- add offset value dynamically using the API -->
-		ISP
 
 		<div class="attribution">
 			Challenge by
