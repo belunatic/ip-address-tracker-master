@@ -9,6 +9,7 @@ const zipCode = document.getElementById("zip-code");
 const timezone = document.getElementById("timezone");
 const isp = document.getElementById("isp");
 const errorMessage = document.getElementById("error-message");
+// const map
 //variables
 let map;
 
@@ -44,6 +45,11 @@ function displayResult(data) {
 }
 
 function displayMap(lat, lon) {
+	//check to see if map element is initiated
+	//if so remove and add the new lat and lng
+	if (map != undefined) {
+		map.remove();
+	}
 	map = L.map("map").setView([lat, lon], 13);
 	L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 		maxZoom: 19,
