@@ -16,6 +16,7 @@ let map;
 //DOM loaded
 document.addEventListener("DOMContentLoaded", apiFetch());
 
+//fetch data
 async function apiFetch(options = "") {
 	try {
 		const res = await fetch(
@@ -23,6 +24,7 @@ async function apiFetch(options = "") {
 		);
 
 		if (!res.ok) {
+			errorMessage.classList.remove("hidden");
 			throw new Error(`Fetching error, status -> ${res.status}`);
 		}
 		//get the data
@@ -44,13 +46,14 @@ function displayResult(data) {
 	isp.textContent = data.isp;
 }
 
+//display Map
 function displayMap(lat, lon) {
 	//check to see if map element is initiated
 	//if so remove and add the new lat and lng
 	if (map != undefined) {
 		map.remove();
 	}
-	map = L.map("map").setView([lat, lon], 13);
+	map = L.map("map").setView([lat, lon], 19);
 	L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 		maxZoom: 19,
 		attribution:
@@ -59,7 +62,7 @@ function displayMap(lat, lon) {
 	var myIcon = L.icon({
 		iconUrl: "images/icon-location.svg",
 		iconSize: [40, 50],
-		iconAnchor: [22, 94],
+		// iconAnchor: [22, 94],
 	});
 	var marker = L.marker([lat, lon], { icon: myIcon }).addTo(map);
 }
