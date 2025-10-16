@@ -32,7 +32,9 @@
 							name="ip-address"
 							id="ip-address"
 							placeholder="Search for any IP address or domain"
-							class="bg-white p-4 text-grey-200 w-64 md:w-96 h-[50px] rounded-tl-lg rounded-bl-lg" />
+							class="bg-white p-4 text-grey-200 w-64 md:w-96 h-[50px] rounded-tl-lg rounded-bl-lg"
+							aria-invalid="true"
+							aria-describedby="error-message" />
 						<button
 							class="bg-black text-white h-[50px] p-4 relative -left-1 top-0.5 rounded-tr-lg rounded-br-lg">
 							<img
@@ -41,6 +43,11 @@
 								type="submit" />
 						</button>
 					</form>
+					<div>
+						<p class="text-rose-200 text-base mt-2 hidden" id="error-message">
+							Please enter a valid ip address / domain. Ex: 8.8.8.8 / google.com
+						</p>
+					</div>
 				</div>
 				<div
 					id="ip-results"
