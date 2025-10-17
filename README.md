@@ -2,7 +2,7 @@
 
 IP Tracker is a lightweight web app designed to convert IP addresses and domain names into geolocation data. Whether you're troubleshooting network issues, analyzing traffic sources, or simply curious about where a domain points, this tool provides a fast and intuitive way to track IP origins. Built for simplicity and clarity, IP Tracker empowers users to explore digital footprints with ease.
 
-** Link to project:** [Ip Tracker](https://belunatic.github.io/ip-address-tracker-master/)
+<b>Link to project: </b> [IP Tracker](https://belunatic.github.io/ip-address-tracker-master/)
 
 ---
 
